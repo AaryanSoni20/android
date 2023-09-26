@@ -13,13 +13,15 @@ package.domain = org.test
 source.dir = myKivyMDApp/
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg
+source.include_exts = py,png,jpg, fonts/*.ttf
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = assets/*,images/*.png, assets/*.png, assets/**.*
+#source.include_patterns = assets/*,images/*.png, assets/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
+
+# font
 
 # (list) List of directory to exclude (let empty to not exclude anything)
 #source.exclude_dirs = tests, bin, venv
@@ -37,7 +39,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivymd,pillow
+requirements = python3,kivy==2.2.1,kivymd==1.1.1,pillow,cython==3.0.2
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -61,17 +63,15 @@ orientation = portrait
 #
 
 # Specify the fonts directory relative to your project directory
-presplash.fonts = fonts/
-
 
 #
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3
+osx.python_version = 3.10.12
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+osx.kivy_version = 2.2.1
 
 #
 # Android specific

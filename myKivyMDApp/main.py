@@ -3,6 +3,7 @@ from kivymd.app import MDApp
 from kivy.core.window import Window
 from kivymd.uix.card import MDCard
 from kivy.properties import StringProperty
+import ssl
 # import pywhatkit as wa
 # import webbrowser as wb
 
@@ -19,21 +20,39 @@ MDScreen:
                     pos_hint: {'top':1}
                     left_action_items: [['menu', lambda x: nav_drawer.set_state('open')]]
                 
-                MDScrollView:
-                    MDCard:
-                        orientation: 'vertical'
-                        size_hint: (None,None)
+                MDCard:
+                    orientation: 'vertical'
+                    size_hint: (None,None)
+                    size: (120,120)
+                    radius: (100,100,100,100)
+                    pos_hint: {'center_x':0.5, 'center_y':0.8}
+                    style: 'outlined'
+                    line_color: app.theme_cls.primary_color
+                    line_width: 1
+                    FitImage:
+                        source: '../assets/image.png'
+                        size_hint: (None, None)
                         size: (120,120)
                         radius: (100,100,100,100)
-                        pos_hint: {'center_x':0.5, 'center_y':0.7}
-                        style: 'outlined'
-                        line_color: app.theme_cls.primary_color
-                        line_width: 1
-                        FitImage:
-                            source: '../assets/image.png'
-                            size_hint: (None, None)
-                            size: (120,120)
-                            radius: (100,100,100,100)
+                
+                MDLabel:
+                    text: 'KRISHNA JEWELLERS'
+                    font_size: 30
+                    font_weight: 'bold'
+                    font_name: '../fonts/Charter Bold.ttf'
+                    pos_hint: {'center_x': 0.675, 'center_y': 0.7}
+                
+                MDLabel:
+                    text: 'Dineshbhai Soni'
+                    font_size: 25
+                    font_name: '../fonts/Charter Bold Italic.ttf'
+                    pos_hint: {'center_x': 0.8, 'center_y': 0.65}
+                
+                MDLabel:
+                    text: 'Proprietor'
+                    font_size: 25
+                    font_name: '../fonts/Charter Italic.ttf'
+                    pos_hint: {'center_x': 0.875, 'center_y': 0.61}
 
         MDNavigationDrawer:
             id: nav_drawer
@@ -44,14 +63,13 @@ MDScreen:
             MDNavigationDrawerMenu:
                 MDNavigationDrawerHeader:
                     title: 'Username'
-                    source: '../assets/NewPassportPhoto.png'
                     text: 'points'
                     spacing: '4dp'
                     padding: '12dp', 0,0, '56dp'
                 
                 MDNavigationDrawerItem:
                     icon: 'account'
-                    text: 'Profile'
+                    text: 'Account'
                     on_release: nav_drawer.set_state('close')
                 
                 MDNavigationDrawerItem:
