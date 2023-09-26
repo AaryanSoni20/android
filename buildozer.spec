@@ -122,8 +122,7 @@ fullscreen = 0
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
-# (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = /home/das0206/.buildozer/android/platform/android-ndk-r25b
+# (str) Android NDK directory (if empty, it will be automatically downloaded.
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
